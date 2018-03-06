@@ -5,11 +5,14 @@ var config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'bundle.js',
+    filename: 'index.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'Pug Template',
+      xesc: 'A verry long descriptions with test and bla',
       template: '!!pug-loader!src/index.pug',
+
     }),
   ]
 }
