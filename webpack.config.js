@@ -12,7 +12,8 @@ var config = {
       title: 'Pug Template',
       xesc: 'A verry long descriptions with test and bla',
       template: '!!pug-loader!src/index.pug',
-
+      posts: [ {name:"salar", age:33},{name:"lond", age:23},{name:"jenny", age:24} 
+      ]
     }),
   ]
 }
