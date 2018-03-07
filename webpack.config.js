@@ -2,14 +2,26 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require("path");
 
 var config = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'index.js',
+    filename: 'budle.js',
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        }
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Pug Template',
+      title: 'Puge Template',
       xesc: 'A verry long descriptions with test and bla',
       template: '!!pug-loader!src/index.pug',
       posts: [ {name:"salar", age:33},{name:"lond", age:23},{name:"jenny", age:24} 
