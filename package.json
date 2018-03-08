@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.jsx",
   "scripts": {
-     "start": "./node_modules/.bin/webpack",
-   "build": "./node_modules/.bin/webpack -p",
-    "clean": "rm -fr ./dist"
+    "watch": "./node_modules/.bin/webpack -d --watch",
+    "clean": "rm -fr ./dist",
+    "build": "./node_modules/.bin/webpack -d"
   },
   "keywords": [],
   "author": "",
@@ -32,7 +32,7 @@
   },
   "description": "",
   "repository": {
-   "type": "git",
-   "url": "git+ssh://git@bitbucket.org/spielhoelle/react-starter.git"
- }
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/spielhoelle/react-starter.git"
+  }
 }

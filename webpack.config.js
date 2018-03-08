@@ -5,7 +5,7 @@ var config = {
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'budle.js',
+    filename: 'bundle.js',
   },
   module: {
     loaders: [
@@ -22,7 +22,7 @@ var config = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Puge Template',
-      xesc: 'A verry long descriptions with test and bla',
+      xesc: 'A verry long descriptions with Salar Teach',
       template: '!!pug-loader!src/index.pug',
       posts: [ {name:"salar", age:33},{name:"lond", age:23},{name:"jenny", age:24} 
       ]
