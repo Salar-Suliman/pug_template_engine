@@ -1,17 +1,17 @@
 
 import React from 'react'
-class Header extends React.Component {
-		render(){
+function Header(props) {
+		
           return (
 
 				<div className="py-5 text-center">
 					<img className="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg"alt="" width="72" height="72"/>
-					<h2>{this.props.headerdata.title}</h2>
+					<h2>{props.headerdata.title}</h2>
 					<h3>A verry long descriptions with test and bla</h3>
-					<p className="lead">{this.props.headerdata.desc}</p>
+					<p className="lead">{props.headerdata.desc}</p>
 				</div>
                 );
-      }
+      
   }
 
  export default Header;
