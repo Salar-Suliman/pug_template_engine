@@ -18,14 +18,14 @@ class App extends React.Component {
                     "id":0,
                     "name":"javaScript:The Definitive Guide, 6t Edition",
                     "release":"September 2010",
-                    "amount":1,
+                    "amount":0,
                     "price":"2.99"
                 },
                 {
                     "id":1,
                     "name":"Ruby on Rails: Up and Running",
                     "release":"March 2007",
-                    "amount":1,
+                    "amount":0,
                     "price":"30.99"    
                 }
             ], 

@@ -2,13 +2,39 @@ import React from 'react'
 class Product extends React.Component {
    constructor(props){
               super(props);
-              this.state ={liked:false }
+              this.state =
+              {            liked:false 
+                  
+              }
               this.handeleClick = this.handeleClick.bind(this)
+              this.counterP = this.counterP.bind(this)
+              this.counterM = this.counterM.bind(this)
             }
             handeleClick(e) {
                  this.state.liked=!this.state.liked
                  this.setState(this)
             }
+            counterP() {
+              if(this.props.data.amount >= 0)
+                this.props.data.amount++ 
+              this.setState(this)
+              //console.dir(this.props.data.amount)
+            }
+            counterM() {
+              if(this.props.data.amount <= 0){
+                this.props.data.amount = 0;
+              } else {
+               
+                  this.props.data.amount--
+              }
+              
+                
+              this.setState(this)
+              //console.dir(this.props.data.amount)
+            }
+                
+               
+
 		render(){
 
           return (
@@ -26,10 +52,10 @@ class Product extends React.Component {
          </button>
   	   	<div className = "d-flex flex-column">
   		   	<span className = "text-muted d-flex justify-content-center align-items-baseline">
-  		      <button className= "btn btn-sm btn-light">-</button>
-         	  <button className= "btn btn-sm btn-light">.</button>
+  		      <button className= "btn btn-sm btn-light" onClick= {(e) => this.counterM(this)} >-</button>
+         	  <button className= "btn btn-sm btn-light" onClick= {(e) => this.counterP(this)} >.</button>
   			 </span>
-  			 <span className= "badge" > {"Product" + this.props.data.id}</span>
+         <span className={"badge" + " " +(this.props.data.amount > 0 ? "badge-danger" : "")}>{ this.props.data.amount }</span>
        	</div>
 
         </li>
